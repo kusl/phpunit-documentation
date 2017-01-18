@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 
 <chapter id="other-uses-for-tests">
-  <title>Weitere Anwendungsmöglichkeiten für Tests</title>
+  <title>Weitere Anwendungsmï¿½glichkeiten fï¿½r Tests</title>
 
   <caution>
     <para>
-      Dies ist die Dokumentation für eine Version von PHPUnit, die nicht mehr
+      Dies ist die Dokumentation fï¿½r eine Version von PHPUnit, die nicht mehr
       aktuell ist.
     </para>
 
     <para>
-      Die Dokumentation für die aktuelle Version von PHPUnit finden Sie
+      Die Dokumentation fï¿½r die aktuelle Version von PHPUnit finden Sie
       <ulink url="../../current/en/index.html">hier</ulink>.
     </para>
   </caution>
 
   <para>
-    Wenn Sie sich erst einmal daran gewöhnt haben, automatisierte Tests zu
-    schreiben, werden Sie vermutlich weitere Anwendungsmöglichkeiten dafür
+    Wenn Sie sich erst einmal daran gewï¿½hnt haben, automatisierte Tests zu
+    schreiben, werden Sie vermutlich weitere Anwendungsmï¿½glichkeiten dafï¿½r
     entdecken. Hier sind einige Beispiele.
   </para>
 
@@ -31,26 +31,26 @@
       <indexterm><primary>TestDox</primary></indexterm>
 
       In einem Projekt, das mit einem agilen Software-Entwicklungsprozess wie
-      dem Extreme Programming entwickelt wird, kommt es häufig vor, dass die
-      Dokumentation nicht mit den Änderungen an Code und Design Schritt
+      dem Extreme Programming entwickelt wird, kommt es hï¿½ufig vor, dass die
+      Dokumentation nicht mit den ï¿½nderungen an Code und Design Schritt
       halten kann. Extreme Programming verlangt <emphasis>kollektives Eigentum
-      des Codes</emphasis>. Daher müssen alle Entwickler wissen, wie das
+      des Codes</emphasis>. Daher mï¿½ssen alle Entwickler wissen, wie das
       gesamte System funktioniert. Wenn Sie diszipliniert genug sind und
-      konsequent "sprechende Namen" für Ihre Tests verwenden, können Sie
-      mit Hilfe der TestDox-Funktionalität von PHPUnit automatisch
-      Dokumentation für Ihr Projekt auf Grundlage der Tests erstellen. Diese
-      Dokumentation gibt den Entwicklern einen Überblick über die Klassen
+      konsequent "sprechende Namen" fï¿½r Ihre Tests verwenden, kï¿½nnen Sie
+      mit Hilfe der TestDox-Funktionalitï¿½t von PHPUnit automatisch
+      Dokumentation fï¿½r Ihr Projekt auf Grundlage der Tests erstellen. Diese
+      Dokumentation gibt den Entwicklern einen ï¿½berblick ï¿½ber die Klassen
       des Projekts, und was von ihnen erwartet wird.
     </para>
 
     <para>
-      Die TestDox-Funktionalität von PHPUnit betrachtet die Testmethoden und
-      erzeugt aus der Camel-Case-Notation der PHP-Namen Sätze: aus
+      Die TestDox-Funktionalitï¿½t von PHPUnit betrachtet die Testmethoden und
+      erzeugt aus der Camel-Case-Notation der PHP-Namen Sï¿½tze: aus
       <literal>testBalanceIsInitiallyZero()</literal> wird "Balance is initially
       zero". Gibt es mehrere Testmethoden, deren Namen sich nur durch eine
       Ziffer am Ende unterscheiden (beispielsweise
-      <literal>testBalanceCannotBecomeNegative()</literal> und
-      <literal>testBalanceCannotBecomeNegative2()</literal>), so wird der
+      <literal>testBalanceCannotBecomeNegativeByWithdrawal()</literal> und
+      <literal>testBalanceCannotBecomeNegativeByDeposit()</literal>), so wird der
       entsprechende Satz ("Balance cannot become negative") nur einmal
       erzeugt, und zwar dann, wenn alle diese Testmethoden erfolgreich
       durchlaufen wurden.
@@ -59,7 +59,7 @@
     <para>
       Das folgende Beispiel zeigt die mit
       <userinput>phpunit --testdox-text BankAccountTest.txt BankAccountTest</userinput>
-      für die Tests aus
+      fï¿½r die Tests aus
       <xref linkend="test-first-programming.bankaccount-example.examples.BankAccountTest.php" />
       erstellte agile Dokumentation.
     </para>
@@ -75,45 +75,45 @@
     </para>
 
     <para>
-      <indexterm><primary>Dokumentieren von Prämissen</primary></indexterm>
+      <indexterm><primary>Dokumentieren von Prï¿½missen</primary></indexterm>
 
-      Wenn Sie sich dazu entschließen, bei der Entwicklung ein externes Paket
+      Wenn Sie sich dazu entschlieï¿½en, bei der Entwicklung ein externes Paket
       einzusetzen, gehen Sie damit ein gewisses Risiko ein. Es ist nicht
-      auszuschließen, dass sich das Paket nicht so verhält, wie Sie es
-      erwarten, und dass sich zukünftige Versionen in subtiler Weise so
-      verändern, dass Ihre Programme nicht mehr funktionieren, ohne dass Sie
-      es merken. Eine Möglichkeit, dieses Problem zu lösen, besteht darin,
-      Annahmen über die Funktionsweise des externen Paketes durch Tests und
+      auszuschlieï¿½en, dass sich das Paket nicht so verhï¿½lt, wie Sie es
+      erwarten, und dass sich zukï¿½nftige Versionen in subtiler Weise so
+      verï¿½ndern, dass Ihre Programme nicht mehr funktionieren, ohne dass Sie
+      es merken. Eine Mï¿½glichkeit, dieses Problem zu lï¿½sen, besteht darin,
+      Annahmen ï¿½ber die Funktionsweise des externen Paketes durch Tests und
       agile Dokumentation zu dokumentieren: Jedes Mal, wenn Sie eine Annahme
       treffen, schreiben Sie einen Test. Wird der Test bestanden, ist Ihre
-      Prämisse gültig. Wenn Sie die erforderliche Disziplin aufbringen und
-      alle Annahmen durch Tests ausdrücken, dann brauchen Sie in der Zukunft
-      neue Versionen des externen Paketes nicht zu fürchten. Sie lassen Ihre
-      Testreihe laufen, und wenn diese erfolgreich verläuft, so können Sie
+      Prï¿½misse gï¿½ltig. Wenn Sie die erforderliche Disziplin aufbringen und
+      alle Annahmen durch Tests ausdrï¿½cken, dann brauchen Sie in der Zukunft
+      neue Versionen des externen Paketes nicht zu fï¿½rchten. Sie lassen Ihre
+      Testreihe laufen, und wenn diese erfolgreich verlï¿½uft, so kï¿½nnen Sie
       davon ausgehen, dass Ihre Programme weiterhin wie erwartet
-      funktionieren. Andernfalls müssen Sie näher untersuchen, was sich
-      geändert hat.
+      funktionieren. Andernfalls mï¿½ssen Sie nï¿½her untersuchen, was sich
+      geï¿½ndert hat.
     </para>
   </section>
 
   <section id="other-uses-for-tests.cross-team-tests">
-    <title>Teamübergreifende Tests</title>
+    <title>Teamï¿½bergreifende Tests</title>
 
     <para>
-      Wenn Sie Tests dazu verwenden, Prämissen zu dokumentieren, gehören die
+      Wenn Sie Tests dazu verwenden, Prï¿½missen zu dokumentieren, gehï¿½ren die
       Tests Ihnen. In diesem Fall haben Sie mit dem Lieferanten des Pakets,
-      auf das Sie sich verlassen können müssen, eine eher distanzierte
+      auf das Sie sich verlassen kï¿½nnen mï¿½ssen, eine eher distanzierte
       Beziehung. Ist die Beziehung zu dem Hersteller aber enger oder streben
-      Sie eine engere Beziehung an, so können Tests eine Möglichkeit zur
-      Koordination Ihrer Aktivitäten sein.
+      Sie eine engere Beziehung an, so kï¿½nnen Tests eine Mï¿½glichkeit zur
+      Koordination Ihrer Aktivitï¿½ten sein.
     </para>
 
     <para>
-      Können Sie sich mit dem Ersteller auf eine API einigen, ist es Ihnen
-      möglich, die Tests gemeinsam zu schreiben und zu pflegen. Sie setzen
+      Kï¿½nnen Sie sich mit dem Ersteller auf eine API einigen, ist es Ihnen
+      mï¿½glich, die Tests gemeinsam zu schreiben und zu pflegen. Sie setzen
       sich mit dem Lieferanten zusammen und codieren die Tests so, dass sie
-      so viele Prämissen wie möglich deutlich machen. Versteckte
-      Anforderungen sind der Tod jeder Kooperation. Anhand der Tests weiß
+      so viele Prï¿½missen wie mï¿½glich deutlich machen. Versteckte
+      Anforderungen sind der Tod jeder Kooperation. Anhand der Tests weiï¿½
       der Hersteller genau, was von ihm erwartet wird. Er braucht erst
       wiederzukommen, wenn alle Tests erfolgreich laufen.
     </para>
@@ -121,7 +121,7 @@
     <para>
       <indexterm><primary>Stubs</primary></indexterm>
 
-      Mit dem Konzept der Stubs aus dem vorigen Kapitel können Sie die beiden
+      Mit dem Konzept der Stubs aus dem vorigen Kapitel kï¿½nnen Sie die beiden
       Teams noch weiter entkoppeln:
     </para>
 
@@ -136,15 +136,15 @@
 
       <listitem>
         <para>
-          Ihre Aufgabe ist es, dafür zu sorgen, dass Ihr eigener Code mit den
-          Stub-Objekten funktioniert, bis er schließlich die eigentliche
-          Implementierung erhält.
+          Ihre Aufgabe ist es, dafï¿½r zu sorgen, dass Ihr eigener Code mit den
+          Stub-Objekten funktioniert, bis er schlieï¿½lich die eigentliche
+          Implementierung erhï¿½lt.
         </para>
       </listitem>
     </itemizedlist>
 
     <para>
-      Auf diese Weise können beide Teams unabhängig voneinander arbeiten.
+      Auf diese Weise kï¿½nnen beide Teams unabhï¿½ngig voneinander arbeiten.
     </para>
   </section>
 
@@ -153,27 +153,27 @@
 
     <para>
       Wenn Sie eine Fehlermeldung erhalten, so mag Ihre spontane Reaktion
-      darauf sein, den Fehler so schnell wie möglich zu beheben. Diese Neigung
+      darauf sein, den Fehler so schnell wie mï¿½glich zu beheben. Diese Neigung
       ist aber selten hilfreich, da es sehr wahrscheinlich ist, dass Sie mit
       Ihrer "Reparatur" einen anderen Fehler verursachen.
     </para>
 
     <para>
-      Tests bieten eine Möglichkeit, diesen spontane Drang im Zaum zu
+      Tests bieten eine Mï¿½glichkeit, diesen spontane Drang im Zaum zu
       halten.
     </para>
 
     <orderedlist>
       <listitem>
         <para>
-          Verifizieren Sie, dass Sie den Fehler reproduzieren können.
+          Verifizieren Sie, dass Sie den Fehler reproduzieren kï¿½nnen.
         </para>
       </listitem>
 
       <listitem>
         <para>
-          Finden Sie die kleinstmögliche Programmeinheit, in der sich der
-          Fehler noch darstellen lässt. Wenn beispielsweise eine Zahl in der
+          Finden Sie die kleinstmï¿½gliche Programmeinheit, in der sich der
+          Fehler noch darstellen lï¿½sst. Wenn beispielsweise eine Zahl in der
           Ausgabe fehlerhaft dargestellt wird, suchen Sie das Objekt, das
           diese Zahl berechnet.
         </para>
@@ -194,14 +194,14 @@
     </orderedlist>
 
     <para>
-      Die Suche nach der kleinstmöglichen zuverlässigen Reproduktion des
-      Fehlers gibt Ihnen die Möglichkeit, sich wirklich auf die Ursache des
-      Problems zu konzentrieren. Der Test, den Sie schreiben, erhöht die
+      Die Suche nach der kleinstmï¿½glichen zuverlï¿½ssigen Reproduktion des
+      Fehlers gibt Ihnen die Mï¿½glichkeit, sich wirklich auf die Ursache des
+      Problems zu konzentrieren. Der Test, den Sie schreiben, erhï¿½ht die
       Wahrscheinlichkeit, dass Sie durch die Reparatur wirklich nur den
-      Fehler beseitigen. Zusätzlich vermindert der neue Test die
-      Wahrscheinlichkeit, dass die Korrektur zu einem späteren Zeitpunkt
-      versehentlich rückgängig gemacht wird. Die bereits existierenden Tests
-      tragen dafür Sorge, dass die Korrektur des aktuellen Problems
+      Fehler beseitigen. Zusï¿½tzlich vermindert der neue Test die
+      Wahrscheinlichkeit, dass die Korrektur zu einem spï¿½teren Zeitpunkt
+      versehentlich rï¿½ckgï¿½ngig gemacht wird. Die bereits existierenden Tests
+      tragen dafï¿½r Sorge, dass die Korrektur des aktuellen Problems
       ihrerseits keine neuen Probleme verursacht.
     </para>
   </section>
@@ -213,9 +213,9 @@
       <indexterm><primary>Refactoring</primary></indexterm>
 
       Erst automatisierte Tests machen die zum Erreichen des einfachsten
-      Designs nötigen Änderungen (Refactoring, "neu herstellen") am Code
-      sinnvoll durchführbar. Ohne sie müsste jede Methode einer jeden
-      Klasse von Hand getestet werden, wenn der Code einer Klasse geändert
+      Designs nï¿½tigen ï¿½nderungen (Refactoring, "neu herstellen") am Code
+      sinnvoll durchfï¿½hrbar. Ohne sie mï¿½sste jede Methode einer jeden
+      Klasse von Hand getestet werden, wenn der Code einer Klasse geï¿½ndert
       wurde. Der Vorgang des Refactoring kann in kleine Einzelschritte
       aufgeteilt werden, die verhaltensneutral sind.
     </para>
@@ -236,11 +236,11 @@
       </listitem>
 
       <listitem>
-        <para>Der Code enthält keine Redundanz.</para>
+        <para>Der Code enthï¿½lt keine Redundanz.</para>
       </listitem>
 
       <listitem>
-        <para>Der Code enthält, unter Berücksichtigung der obigen Regeln, die geringstmögliche Anzahl an Klassen und Methoden.</para>
+        <para>Der Code enthï¿½lt, unter Berï¿½cksichtigung der obigen Regeln, die geringstmï¿½gliche Anzahl an Klassen und Methoden.</para>
       </listitem>
     </orderedlist>
   </section>

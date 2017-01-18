@@ -35,8 +35,8 @@
       それを PHP 風のキャメルケースから通常の文に変換します。つまり
       <literal>testBalanceIsInitiallyZero()</literal> が "Balance is initially zero"
       のようになるわけです。最後のほうの数字のみが違うメソッド、例えば
-      <literal>testBalanceCannotBecomeNegative()</literal> と
-      <literal>testBalanceCannotBecomeNegative2()</literal> のようなものが存在した場合は、
+      <literal>testBalanceCannotBecomeNegativeByWithdrawal()</literal> と
+      <literal>testBalanceCannotBecomeNegativeByDeposit()</literal> のようなものが存在した場合は、
       文 "Balance cannot become negative" は一度のみ表示され、
       全てのテストが成功したことを表します。
     </para>

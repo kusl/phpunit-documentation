@@ -5,12 +5,12 @@
 
   <caution>
     <para>
-      Dies ist die Dokumentation für eine Version von PHPUnit, die nicht mehr
+      Dies ist die Dokumentation fï¿½r eine Version von PHPUnit, die nicht mehr
       aktuell ist.
     </para>
 
     <para>
-      Die Dokumentation für die aktuelle Version von PHPUnit finden Sie
+      Die Dokumentation fï¿½r die aktuelle Version von PHPUnit finden Sie
       <ulink url="../../current/en/index.html">hier</ulink>.
     </para>
   </caution>
@@ -26,57 +26,57 @@
     Software-Entwicklungsprozesse wie Test-First-Programmierung,
     <ulink url="http://de.wikipedia.org/wiki/Extreme_Programming">Extreme Programming</ulink>
     und <ulink url="http://en.wikipedia.org/wiki/Test-driven_development">testgetriebener Entwicklung</ulink>.
-    Ferner ermöglichen Sie die Entwicklung im Stile von
+    Ferner ermï¿½glichen Sie die Entwicklung im Stile von
     <ulink url="http://de.wikipedia.org/wiki/Design_by_Contract">Design-by-Contract</ulink>
     in Programmiersprachen wie PHP, die diese Methode nicht auf Sprachebene
-    unterstützen.
+    unterstï¿½tzen.
   </para>
 
   <para>
-    Auch wenn Sie PHPUnit verwenden, können Sie Ihre Tests erst dann
+    Auch wenn Sie PHPUnit verwenden, kï¿½nnen Sie Ihre Tests erst dann
     schreiben, wenn Sie mit dem Programmieren fertig sind. Erinnern Sie sich
-    aber an die Erkenntnis, dass Tests umso wertvoller sind, je kürzer der
-    Abstand zwischen ihrer Ausführung und dem Zeitpunkt der potentiellen
+    aber an die Erkenntnis, dass Tests umso wertvoller sind, je kï¿½rzer der
+    Abstand zwischen ihrer Ausfï¿½hrung und dem Zeitpunkt der potentiellen
     Entstehung eines Fehlers ist. Anstatt also die Tests erst Monate nach
-    dem Abschluss der Programmierarbeiten zu schreiben, können Sie sie auch
-    Tage oder Stunden oder Minuten nach dem potentiellen Einfügen eines
+    dem Abschluss der Programmierarbeiten zu schreiben, kï¿½nnen Sie sie auch
+    Tage oder Stunden oder Minuten nach dem potentiellen Einfï¿½gen eines
     Mangels in den Code schreiben. Aber warum nicht sogar noch weiter
-    gehen? Warum nicht Tests noch etwas früher schreiben, und zwar bevor
-    überhaupt ein möglicher Fehler entstehen kann?
+    gehen? Warum nicht Tests noch etwas frï¿½her schreiben, und zwar bevor
+    ï¿½berhaupt ein mï¿½glicher Fehler entstehen kann?
   </para>
 
   <para>
     Test-First-Programmierung als Bestandteil von Extreme Programming und
     testgetriebener Entwicklung baut auf dieser Idee auf. Die heutige
-    Computertechnik gibt uns die Möglichkeit, tausendmal am Tag Tausende
-    von Tests auszuführen. Die Rückmeldungen aus allen diesen Tests
-    ermöglichen es uns, in kleinen Schritten zu programmieren und jeden
+    Computertechnik gibt uns die Mï¿½glichkeit, tausendmal am Tag Tausende
+    von Tests auszufï¿½hren. Die Rï¿½ckmeldungen aus allen diesen Tests
+    ermï¿½glichen es uns, in kleinen Schritten zu programmieren und jeden
     dieser Schritte durch einen neuen automatisierten Test abzusichern,
-    den wir den bereits bestehenden Tests hinzufügen. Die Tests haben für
-    Sie dieselbe Funktion wie die Felshaken für Bergsteiger: Sie geben
+    den wir den bereits bestehenden Tests hinzufï¿½gen. Die Tests haben fï¿½r
+    Sie dieselbe Funktion wie die Felshaken fï¿½r Bergsteiger: Sie geben
     Ihnen die Sicherheit, dass Sie, egal was passiert, immer nur das letzte
-    Stück zurückfallen können.
+    Stï¿½ck zurï¿½ckfallen kï¿½nnen.
   </para>
 
   <para>
-    Wenn man die Tests zuerst schreibt, lassen sie sich zunächst nicht
-    ausführen, da sie Objekt und Methoden verwenden, die noch nicht
-    definiert sind. Dies mag einem zunächst merkwürdig vorkommen, aber mit
-    der Zeit gewöhnt man sich daran. Die Test-First-Programmierung bietet
-    eine pragmatische Möglichkeit, um das Prinzip der Programmierung gegen
-    eine Schnittstelle an Stelle einer Implementierung umzusetzen: Während
-    Sie die Tests schreiben denken Sie über die Schnittstelle des Objekts
+    Wenn man die Tests zuerst schreibt, lassen sie sich zunï¿½chst nicht
+    ausfï¿½hren, da sie Objekt und Methoden verwenden, die noch nicht
+    definiert sind. Dies mag einem zunï¿½chst merkwï¿½rdig vorkommen, aber mit
+    der Zeit gewï¿½hnt man sich daran. Die Test-First-Programmierung bietet
+    eine pragmatische Mï¿½glichkeit, um das Prinzip der Programmierung gegen
+    eine Schnittstelle an Stelle einer Implementierung umzusetzen: Wï¿½hrend
+    Sie die Tests schreiben denken Sie ï¿½ber die Schnittstelle des Objekts
     nach, das Sie gerade testen -- wie sieht dieses Objekt von aussen aus?
-    Wenn Sie daran gehen, den tatsächlichen Code zu schreiben, der hinter
-    dem getesteten Objekt steht, denken Sie nur über die Implementierung
+    Wenn Sie daran gehen, den tatsï¿½chlichen Code zu schreiben, der hinter
+    dem getesteten Objekt steht, denken Sie nur ï¿½ber die Implementierung
     nach. Die Schnittstelle ist durch den fehlschlagenden Test
     festgelegt.
   </para>
 
   <para>
-    Was nun folgt, ist eine zwangsläufig verkürzte Einführung in die
-    Test-First-Programmierung. Es gibt andere Bücher, mit deren Hilfe Sie
-    sich tiefer in dieses Thema einarbeiten können, zum Beispiel
+    Was nun folgt, ist eine zwangslï¿½ufig verkï¿½rzte Einfï¿½hrung in die
+    Test-First-Programmierung. Es gibt andere Bï¿½cher, mit deren Hilfe Sie
+    sich tiefer in dieses Thema einarbeiten kï¿½nnen, zum Beispiel
     <emphasis>Test-Driven Development: By Example</emphasis>
     <xref linkend="Beck2002" /> von Kent Beck oder
     <emphasis>Test-Driven Development: A Practical Guide</emphasis>
@@ -88,8 +88,8 @@
 
     <para>
       Als Beispiel betrachten wir eine Klasse, die ein Bankkonto
-      repräsentieren soll. Der Vertrag für diese Klasse sieht nicht nur
-      Methoden für den lesenden und schreibenden Zugriff auf das Bankkonto
+      reprï¿½sentieren soll. Der Vertrag fï¿½r diese Klasse sieht nicht nur
+      Methoden fï¿½r den lesenden und schreibenden Zugriff auf das Bankkonto
       vor, sondern auch die Einhaltung der beiden folgenden Bedingungen:
     </para>
 
@@ -104,16 +104,16 @@
     </itemizedlist>
 
     <para>
-      Der Test-First-Programmierung folgend, schreiben Sie die Tests für
+      Der Test-First-Programmierung folgend, schreiben Sie die Tests fï¿½r
       die Klasse <literal>BankAccount</literal> bevor Sie die Klasse selber
-      schreiben. Sie benutzen die Vertragsbedingungen als Ausgangspunkt für
+      schreiben. Sie benutzen die Vertragsbedingungen als Ausgangspunkt fï¿½r
       die Tests und benennen die Testmethoden entsprechend, wie in
       <xref linkend="test-first-programming.bankaccount-example.examples.BankAccountTest.php" />
       gezeigt.
     </para>
 
     <example id="test-first-programming.bankaccount-example.examples.BankAccountTest.php">
-      <title>Tests für die BankAccount-Klasse</title>
+      <title>Tests fï¿½r die BankAccount-Klasse</title>
       <programlisting><![CDATA[<?php
 require_once 'PHPUnit2/Framework/TestCase.php';
 require_once 'BankAccount.php';
@@ -129,7 +129,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
         $this->assertEquals(0, $this->ba->getBalance());
     }
 
-    public function testBalanceCannotBecomeNegative() {
+    public function testBalanceCannotBecomeNegativeByWithdrawal() {
         try {
             $this->ba->withdrawMoney(1);
         }
@@ -141,7 +141,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
         $this->fail();
     }
 
-    public function testBalanceCannotBecomeNegative2() {
+    public function testBalanceCannotBecomeNegativeByDeposit() {
         try {
             $this->ba->depositMoney(-1);
         }
@@ -153,7 +153,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
         $this->fail();
     }
 
-    public function testBalanceCannotBecomeNegative3() {
+    public function testBalanceCannotBecomeNegativeBySetBalance() {
         try {
             $this->ba->setBalance(-1);
         }
@@ -169,7 +169,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
     </example>
 
     <para>
-      Nun schreiben Sie den minimal benötigten Code, damit der erste Test,
+      Nun schreiben Sie den minimal benï¿½tigten Code, damit der erste Test,
       <literal>testBalanceIsInitiallyZero()</literal>, erfolgreich laufen
       kann. Dies bedeutet, dass Sie die Methode <literal>getBalance()</literal>
       der Klasse <literal>BankAccount</literal>, wie in
@@ -178,7 +178,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
     </para>
 
     <example id="test-first-programming.bankaccount-example.examples.BankAccount.php">
-      <title>Benötigter Code, damit der erste Test erfolgreich laufen kann</title>
+      <title>Benï¿½tigter Code, damit der erste Test erfolgreich laufen kann</title>
       <programlisting><![CDATA[<?php
 class BankAccount {
     private $balance = 0;
@@ -191,8 +191,8 @@ class BankAccount {
     </example>
 
     <para>
-      Der Test für die erste Vertragsbedingung läuft nun erfolgreich. Die
-      Tests für die zweite Vertragsbedingung schlagen allerdings noch fehl,
+      Der Test fï¿½r die erste Vertragsbedingung lï¿½uft nun erfolgreich. Die
+      Tests fï¿½r die zweite Vertragsbedingung schlagen allerdings noch fehl,
       da die entsprechenden Methoden der Klasse <literal>BankAccount</literal>
       noch nicht implementiert worden sind.
     </para>
@@ -205,18 +205,18 @@ Fatal error: Call to undefined method BankAccount::withdrawMoney()</screen>
 
     <para>
       Damit die Tests, die die Einhaltung der zweiten Vertragsbedingung
-      überwachen, erfolgreich laufen können, müssen Sie die Methoden
+      ï¿½berwachen, erfolgreich laufen kï¿½nnen, mï¿½ssen Sie die Methoden
       <literal>withdrawMoney()</literal>, <literal>depositMoney()</literal>
       und <literal>setBalance()</literal> der Klasse
       <literal>BankAccount</literal>, wie in
       <xref linkend="test-first-programming.bankaccount-example.examples.BankAccount2.php" />
       gezeigt, implementieren. Diese Methoden werden so implementiert, dass sie
-      eine <literal>InvalidArgumentException</literal> auslösen, wenn sie mit
-      Parameterwerten, die den Vertrag verletzen würden, aufgerufen werden.
+      eine <literal>InvalidArgumentException</literal> auslï¿½sen, wenn sie mit
+      Parameterwerten, die den Vertrag verletzen wï¿½rden, aufgerufen werden.
     </para>
 
     <example id="test-first-programming.bankaccount-example.examples.BankAccount2.php">
-      <title>Die vollständige BankAccount-Klasse</title>
+      <title>Die vollstï¿½ndige BankAccount-Klasse</title>
       <programlisting><![CDATA[<?php
 class BankAccount {
     private $balance = 0;
@@ -253,7 +253,7 @@ class BankAccount {
     </example>
 
     <para>
-      Die Tests für die zweite Vertragsbedingung laufen nun ebenfalls
+      Die Tests fï¿½r die zweite Vertragsbedingung laufen nun ebenfalls
       erfolgreich:
     </para>
 
@@ -269,16 +269,16 @@ OK (4 tests)</screen>
     <para>
       <indexterm><primary>PHPUnit2_Framework_Assert</primary></indexterm>
 
-      Alternativ können Sie die statischen Methoden der Klasse
+      Alternativ kï¿½nnen Sie die statischen Methoden der Klasse
       <literal>PHPUnit2_Framework_Assert</literal> verwenden, um die
       Zusicherungen im Stile von Design-by-Contract in den Code zu
       schreiben, wie in
       <xref linkend="test-first-programming.bankaccount-example.examples.BankAccount3.php" />
-      gezeigt. Wenn eine Zusicherung fehlschlägt wird eine Ausnahme vom Typ
-      <literal>PHPUnit2_Framework_AssertionFailedError</literal> ausgelöst.
-      Auf diese Weise müssen Sie weniger Code für die Überprüfung der
+      gezeigt. Wenn eine Zusicherung fehlschlï¿½gt wird eine Ausnahme vom Typ
+      <literal>PHPUnit2_Framework_AssertionFailedError</literal> ausgelï¿½st.
+      Auf diese Weise mï¿½ssen Sie weniger Code fï¿½r die ï¿½berprï¿½fung der
       Parameterwerte schreiben und die Tests werden lesbarer. Allerdings
-      fügen Sie Ihrem Projekt eine Laufzeitabhängigkeit auf PHPUnit hinzu.
+      fï¿½gen Sie Ihrem Projekt eine Laufzeitabhï¿½ngigkeit auf PHPUnit hinzu.
     </para>
 
     <example id="test-first-programming.bankaccount-example.examples.BankAccount3.php">
@@ -319,13 +319,13 @@ class BankAccount {
       Durch das Schreiben der Vertragsbedingungen in die Tests haben wir
       Design-by-Contract benutzt, um die <literal>BankAccount</literal>-Klasse
       zu entwerfen. Danach haben wir, dem Ansatz der Test-First-Programmierung
-      folgend, nur soviel Code geschrieben, wie für das erfolgreiche
-      Durchlaufen der Tests nötig ist. Allerdings haben wir vergessen, Tests
+      folgend, nur soviel Code geschrieben, wie fï¿½r das erfolgreiche
+      Durchlaufen der Tests nï¿½tig ist. Allerdings haben wir vergessen, Tests
       zu schreiben, die <literal>setBalance()</literal>,
       <literal>depositMoney()</literal> und <literal>withdrawMoney()</literal>
-      mit zulässigen Parametern aufrufen. Wir benötigen ein Hilfsmittel, um
-      die Qualität unserer Tests zu überprüfen. Ein solches Hilfsmittel ist
-      die Code-Coverage-Analyse, die wir im nächsten Kapitel kennenlernen
+      mit zulï¿½ssigen Parametern aufrufen. Wir benï¿½tigen ein Hilfsmittel, um
+      die Qualitï¿½t unserer Tests zu ï¿½berprï¿½fen. Ein solches Hilfsmittel ist
+      die Code-Coverage-Analyse, die wir im nï¿½chsten Kapitel kennenlernen
       werden.
     </para>
   </section>

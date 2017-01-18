@@ -22,8 +22,8 @@
     <para>
       A funcionalidade TestDox do PHPUnit olha para uma classe de teste e todos os nomes dos métodos de teste e os converte de nomes camelCase do PHP para sentenças:
       <literal>testBalanceIsInitiallyZero()</literal> se torna "Saldo eh inicialmente zero". Se houverem vários métodos de teste cujos nomes apenas diferem em um sufixo de um ou mais dígitos, como em
-      <literal>testBalanceCannotBecomeNegative()</literal> e
-      <literal>testBalanceCannotBecomeNegative2()</literal>, a sentença "Saldo nao pode ficar negativo" aparecerá apenas uma vez, assumindo-se que todos os testes foram bem-sucedidos.
+      <literal>testBalanceCannotBecomeNegativeByWithdrawal()</literal> e
+      <literal>testBalanceCannotBecomeNegativeByDeposit()</literal>, a sentença "Saldo nao pode ficar negativo" aparecerá apenas uma vez, assumindo-se que todos os testes foram bem-sucedidos.
     </para>
 
     <para>

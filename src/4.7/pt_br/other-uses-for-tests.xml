@@ -35,8 +35,8 @@
       <literal>testBalanceIsInitiallyZero()</literal> se torna "Balance is
       initially zero". Se houverem vários métodos de teste cujos nomes apenas 
       diferem em um sufixo de um ou mais dígitos, como em
-      <literal>testBalanceCannotBecomeNegative()</literal> e
-      <literal>testBalanceCannotBecomeNegative2()</literal>, a sentença 
+      <literal>testBalanceCannotBecomeNegativeByWithdrawal()</literal> e
+      <literal>testBalanceCannotBecomeNegativeByDeposit()</literal>, a sentença 
       "Balance is initially zero" aparecerá apenas uma vez, assumindo-se que todos os testes foram bem-sucedidos.
     </para>
 

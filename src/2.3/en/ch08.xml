@@ -119,7 +119,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
         $this->assertEquals(0, $this->ba->getBalance());
     }
 
-    public function testBalanceCannotBecomeNegative() {
+    public function testBalanceCannotBecomeNegativeByWithdrawal() {
         try {
             $this->ba->withdrawMoney(1);
         }
@@ -131,7 +131,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
         $this->fail();
     }
 
-    public function testBalanceCannotBecomeNegative2() {
+    public function testBalanceCannotBecomeNegativeByDeposit() {
         try {
             $this->ba->depositMoney(-1);
         }
@@ -143,7 +143,7 @@ class BankAccountTest extends PHPUnit2_Framework_TestCase {
         $this->fail();
     }
 
-    public function testBalanceCannotBecomeNegative3() {
+    public function testBalanceCannotBecomeNegativeBySetBalance() {
         try {
             $this->ba->setBalance(-1);
         }

@@ -47,8 +47,8 @@
       <literal>testBalanceIsInitiallyZero()</literal> becomes "Balance is
       initially zero". If there are several test methods whose names only
       differ in a suffix of one or more digits, such as
-      <literal>testBalanceCannotBecomeNegative()</literal> and
-      <literal>testBalanceCannotBecomeNegative2()</literal>, the sentence
+      <literal>testBalanceCannotBecomeNegativeByWithdrawal()</literal> and
+      <literal>testBalanceCannotBecomeNegativeByDeposit()</literal>, the sentence
       "Balance cannot become negative" will appear only once, assuming that
       all of these tests succeed.
     </para>

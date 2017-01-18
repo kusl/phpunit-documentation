@@ -299,7 +299,7 @@ class BankAccountTest extends TestCase
     /**
      * @covers BankAccount::withdrawMoney
      */
-    public function testBalanceCannotBecomeNegative()
+    public function testBalanceCannotBecomeNegativeByWithdrawal()
     {
         try {
             $this->ba->withdrawMoney(1);
@@ -317,7 +317,7 @@ class BankAccountTest extends TestCase
     /**
      * @covers BankAccount::depositMoney
      */
-    public function testBalanceCannotBecomeNegative2()
+    public function testBalanceCannotBecomeNegativeByDeposit()
     {
         try {
             $this->ba->depositMoney(-1);

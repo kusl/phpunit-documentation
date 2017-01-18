@@ -176,7 +176,7 @@ $this->fail();
 /**
 * @covers ContaBancaria::depositarDinheiro
 */
-public function testBalanceCannotBecomeNegative2()
+public function testBalanceCannotBecomeNegativeByDeposit()
 {
 try {
 $this->cb->depositarDinheiro(-1);
